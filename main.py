@@ -5,7 +5,7 @@ from create_post import create_post
 
 from post_prevency import send_multipart_post
 
-i=8
+i=30
 bearer="Bearer 41201|Lihagh8VOjQqXPZUa6duXOVNwp0BOfBmanaquvRT"
 exid="785"
 platform = ["profilemag", "bleeper"]
@@ -22,7 +22,7 @@ for x in range(i):
     send_multipart_post(
         bearer=bearer,
         userid=random.choice(hacker_ids),
-        message=create_post("post_pool/botnet_tips.txt"),
+        message=create_post("post_pool/nerd_posts.txt"),
         exid=exid, platform=platform[1],
         likes=likes,
         shares=shares,
