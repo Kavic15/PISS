@@ -1,0 +1,76 @@
+{
+    "message": "success",
+    "error": false,
+    "code": 201,
+    "results": {
+        "post": {
+            "id": 279824,
+            "author_user_id": "21239",
+            "text": "\"Just hit my morning run goal! Feeling strong enough to defend my homeland without foreign armies. Why outsource security to #NATO? \ud83c\udfc3\u2642\ufe0f #SelfReliance #StrongNation\"",
+            "fake_like_count": 0,
+            "fake_share_count": 0,
+            "share_object_id": null,
+            "shared_object": null,
+            "as_shared_object": [],
+            "mentions": null,
+            "hashtags": [
+                "#NATO",
+                "#SelfReliance",
+                "#StrongNation"
+            ],
+            "image_media_slug": {
+                "url": null,
+                "name": null
+            },
+            "video_media_slug": {
+                "url": null,
+                "name": null,
+                "thumbnail": null
+            },
+            "digital_media_article": null,
+            "mediathek_article": null,
+            "author": null,
+            "comments": [],
+            "likes": [],
+            "updated": null,
+            "created_at": "1 second ago",
+            "updated_at": "1 second ago",
+            "updated_at_ts": "2025-03-03T14:21:48.000000Z",
+            "exercise_id": "785",
+            "flags": null,
+            "pinned_profile": null
+        },
+        "trends": [
+            {
+                "id": 154765,
+                "trend": "#NATO",
+                "count": 1,
+                "fake_count": 0,
+                "exercise_id": 785,
+                "created_by": "sinr@pawo.cz",
+                "created_at": "2025-03-03T14:27:51.000000Z",
+                "updated_at": "2025-03-03T14:27:51.000000Z"
+            },
+            {
+                "id": 154766,
+                "trend": "#SelfReliance",
+                "count": 1,
+                "fake_count": 0,
+                "exercise_id": 785,
+                "created_by": "sinr@pawo.cz",
+                "created_at": "2025-03-03T14:27:51.000000Z",
+                "updated_at": "2025-03-03T14:27:51.000000Z"
+            },
+            {
+                "id": 154767,
+                "trend": "#StrongNation",
+                "count": 1,
+                "fake_count": 0,
+                "exercise_id": 785,
+                "created_by": "sinr@pawo.cz",
+                "created_at": "2025-03-03T14:27:51.000000Z",
+                "updated_at": "2025-03-03T14:27:51.000000Z"
+            }
+        ]
+    }
+}
