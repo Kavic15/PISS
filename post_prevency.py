@@ -42,12 +42,13 @@ def send_multipart_post(bearer, userid, message, exid, platform, likes, shares, 
     # for header, value in response.headers.items():
     #     print(f"  {header}: {value}")
     print("---------------------------------------------------------------------------------------------------------------------------------------------")
-    print("\n-----   Posting    " + str(remaining) + "/" + str(OutOf) + "   -----")
+    print("-----   Posting    " + str(remaining) + "/" + str(OutOf) + "   -----")
     print(response.status_code)
     print("author: ", userid)
     print("text: ", message)
     print("likes: ", likes)
-    print("---------------------------------------------------------------------------------------------------------------------------------------------")
-    print("shares: ", shares, "\n")
+    print("shares: ", shares)
+    print("---------------------------------------------------------------------------------------------------------------------------------------------\n")
+    
     
     return response
