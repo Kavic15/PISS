@@ -1,6 +1,6 @@
 import requests
 
-def send_multipart_post(bearer, userid, message, exid, platform, likes, shares):
+def send_multipart_post(bearer, userid, message, exid, platform, likes, shares, remaining, OutOf):
     # API endpoint URL - updated to profilemag
     url = "https://dimesia.com/api/v1/social/" + platform + "/post/create"
     
@@ -41,8 +41,13 @@ def send_multipart_post(bearer, userid, message, exid, platform, likes, shares):
     # print("Response Headers:")
     # for header, value in response.headers.items():
     #     print(f"  {header}: {value}")
-    print("\nResponse Body:")
+    print("---------------------------------------------------------------------------------------------------------------------------------------------")
+    print("\n-----   Posting    " + str(remaining) + "/" + str(OutOf) + "   -----")
     print(response.status_code)
-    print("author: ", userid, ";    text: ", message, " \n;    likes: ", likes, ";    shares: ", shares, "\n")
+    print("author: ", userid)
+    print("text: ", message)
+    print("likes: ", likes)
+    print("---------------------------------------------------------------------------------------------------------------------------------------------")
+    print("shares: ", shares, "\n")
     
     return response
