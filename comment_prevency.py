@@ -47,6 +47,3 @@ def send_comment_post(post_id, comment_author, comment_text, exid):
     print(response.text)
     
     return response
-
-if __name__ == "__main__":
-    send_comment_post()

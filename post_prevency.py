@@ -37,14 +37,12 @@ def send_multipart_post(bearer, userid, message, exid, platform, likes, shares):
     response = requests.post(url, headers=headers, files={}, data=form_data)
     
     # Print response details
-    print(f"Status Code: {response.status_code}")
-    print("Response Headers:")
-    for header, value in response.headers.items():
-        print(f"  {header}: {value}")
+    # print(f"Status Code: {response.status_code}")
+    # print("Response Headers:")
+    # for header, value in response.headers.items():
+    #     print(f"  {header}: {value}")
     print("\nResponse Body:")
-    print(response.text)
+    print(response.status_code)
+    print("author: ", userid, ";    text: ", message, " \n;    likes: ", likes, ";    shares: ", shares, "\n")
     
     return response
-
-# if __name__ == "__main__":
-#     send_multipart_post(message=post_text)
