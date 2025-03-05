@@ -1,6 +1,6 @@
 import ollama
 
-def ask_ai(type, topic, post_text, PosNeg):
+def ask_ai(type, topic, post_text, PosNeg, length, author_description):
     if type=="post":
         question = f"Write one social media post about {topic} with the length in range of {length} ± 20 characters. Author is by nature {author_description}"
     if type=="comment":

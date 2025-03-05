@@ -1,14 +1,15 @@
 import requests
+from auth import authorization, ad_id, ex_id
+from random import randrange
 
-def send_multipart_post(bearer, userid, message, exid, platform, likes, shares, remaining, OutOf):
-    # API endpoint URL - updated to profilemag
+def send_post(userid, message, platform, remaining, OutOf):
     url = "https://dimesia.com/api/v1/social/" + platform + "/post/create"
     
     # Updated headers
     headers = {
         "Host": "dimesia.com",
         "Sec-Ch-Ua-Platform": "Windows",
-        "Authorization": bearer,
+        "Authorization": authorization,
         "Accept-Language": "cs-CZ,cs;q=0.9",
         "Sec-Ch-Ua": "\"Chromium\";v=\"133\", \"Not(A:Brand\";v=\"99\"",
         "Sec-Ch-Ua-Mobile": "?0",
@@ -23,14 +24,13 @@ def send_multipart_post(bearer, userid, message, exid, platform, likes, shares, 
         "Connection": "keep-alive"
     }
     
-    # Updated form data for profilemag
     form_data = {
         "author_user_id": userid,
-        "admin_id": "174",
-        "fake_counts_fb": f'{{"fakeLikeCount":{likes},"fakeShareCount":{shares}}}',
+        "admin_id": ad_id,
+        "fake_counts_fb": f'{{"fakeLikeCount":{randrange(300)},"fakeShareCount":{randrange(100)}}}',
         "share_object_id": "",
         "text": "\"" + message + "\"",
-        "exercise_id": exid
+        "exercise_id": ex_id
     }
     
     # Send the POST request
@@ -46,9 +46,6 @@ def send_multipart_post(bearer, userid, message, exid, platform, likes, shares, 
     print(response.status_code)
     print("author: ", userid)
     print("text: ", message)
-    print("likes: ", likes)
-    print("shares: ", shares)
     print("---------------------------------------------------------------------------------------------------------------------------------------------\n")
-    
     
     return response
