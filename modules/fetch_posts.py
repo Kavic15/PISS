@@ -16,7 +16,7 @@ def fetch_posts(platform, max_pages=5):
     }
     
     # Open file once for all pages
-    with open("tocomment.txt", "a", encoding="utf-8") as f:
+    with open("post_pool/tocomment.txt", "a", encoding="utf-8") as f:
         current_page = 1
         total_posts = 0
         
