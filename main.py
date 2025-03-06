@@ -9,5 +9,5 @@ from run_in_batch.post_batch import post_batch
 from pools import hackers, soldiers, blue_users, post_pool
 #from run_in_batch.comment_batch import send_comment
 
-fetch_posts(platform="profilemag")
+#fetch_posts(platform="profilemag")
 post_batch(iterations=100, frequency=30, platform="profilemag", authors=blue_users, theme=1)

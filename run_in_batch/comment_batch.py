@@ -11,7 +11,6 @@ def post_batch(iterations, frequency, mode, platform, authors, theme):
     print("---------------\n")
     print("Posting "+str(iterations)+" comments to "+platform+"\n")
     print("---------------\n")
-    #from pools import soldiers, hackers, blue_users, post_pool
     from pools import post_pool
     
     for x in range(iterations):

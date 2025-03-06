@@ -1,5 +1,6 @@
 import requests
 from auth import authorization, ad_id, ex_id
+import json
 
 def fetch_posts(platform):
     url = "https://dimesia.com/api/v1/social/" + platform + "/post/list"
@@ -39,6 +40,9 @@ def fetch_posts(platform):
                     author_id = post["author_user_id"]
                     post_text = post["text"]
                     hashtags =  post["hashtags"]
+                    f = open("tocomment.txt", "a")
+                    f.write(str(post_id)+";;;"+str(author_id)+";;;"+str(post_text)+";;;"+str(hashtags))
+                    f.close()
                     print("--------------------------------------")
                     print("post_id:     "+ str(post_id))
                     print("author_id:   "+ str(author_id))
