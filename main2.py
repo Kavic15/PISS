@@ -1,9 +1,11 @@
 import threading
 import time
 import random
+from random import randrange
 import signal
 import sys
 from create_post import create_post
+
 from modules.fetch_posts import fetch_posts
 from run_in_batch.comment_batch import comment_batch
 from run_in_batch.post_batch import post_batch
@@ -11,7 +13,7 @@ from pools import hackers, soldiers, blue_users, post_pool, soldiers_red
 
 # Global flag to control thread execution
 running = True
-x = 100
+x = 5
 
 def signal_handler(sig, frame):
     global running
@@ -38,7 +40,7 @@ def run_comments(iterations=x):
         if not running:
             break
         try:
-            comment_batch(iterations=5, frequency=5, mode="pool", PosNeg="negative", 
+            comment_batch(iterations=5, frequency=10, mode="pool", PosNeg="negative", 
                          platform="profilemag", authors=hackers, theme=5)
             print(f"Comment iteration {i+1}/{iterations} completed")
         except Exception as e:
@@ -64,8 +66,8 @@ def run_posts_ru(iterations=x):
         if not running:
             break
         try:
-            post_batch(iterations=1, frequency=60, platform="profilemag", 
-                      authors=soldiers_red, theme=6)
+            post_batch(iterations=5, frequency=120, platform="profilemag", 
+                      authors=soldiers_red, theme=7)
             print(f"Red post iteration {i+1}/{iterations} completed")
         except Exception as e:
             print(f"Error in red posts: {e}")

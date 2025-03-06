@@ -1,4 +1,5 @@
 soldiers = [20984, 20985, 20987, 20989]
+soldiers_red = [20984, 20985]
 hackers = [20998, 20997, 20999]
 blue_users = [20801, 20802, 20803, 20804, 20805, 20818, 20821, 20822, 20823, 20824, 20825]
 
@@ -8,7 +9,9 @@ post_pool=[
     "post_pool/Andvaria_stories.txt",
     "post_pool/Anti-nato_facebook.txt",
     "post_pool/nerd_posts.txt", 
-    "post_pool/wholesome_posts.txt"
+    "post_pool/wholesome_posts.txt",
+    "post_pool/anti-nato_ru.txt",
+    "post_pool/anti-acr_ru.txt"
     ]
 
 comment_pool=[
