@@ -10,3 +10,8 @@ post_pool=[
     "post_pool/nerd_posts.txt", 
     "post_pool/wholesome_posts.txt"
     ]
+
+comment_pool=[
+    "post_pool/comments_hate.txt",
+    "post_pool/comments_positive.txt"
+    ]

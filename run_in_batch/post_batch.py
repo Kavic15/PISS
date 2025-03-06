@@ -2,6 +2,7 @@ from time import sleep
 import random
 from random import randrange
 from create_post import create_post
+import os
 
 from modules.post_prevency import send_post
 
@@ -15,6 +16,10 @@ def post_batch(iterations, frequency, platform, authors, theme):
     from pools import post_pool
     
     for x in range(iterations):
+        if os.stat(post_pool[theme]).st_size == 0:
+            print("The \"" + post_pool[theme] + " file is empty.")
+            return 1
+
         send_post(
             userid=random.choice(authors),
             message=create_post(post_pool[theme]),

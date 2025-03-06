@@ -1,6 +1,7 @@
 import requests
 from auth import authorization, ad_id, ex_id
 from random import randrange
+import http
 
 def send_post(userid, message, platform, remaining, OutOf):
     url = "https://dimesia.com/api/v1/social/" + platform + "/post/create"
@@ -43,7 +44,7 @@ def send_post(userid, message, platform, remaining, OutOf):
     #     print(f"  {header}: {value}")
     print("---------------------------------------------------------------------------------------------------------------------------------------------")
     print("-----   Posting    " + str(remaining) + "/" + str(OutOf) + "   -----")
-    print(response.status_code)
+    print(response.status_code, "-", http.client.responses.get(response.status_code, "Unknown Status Code"))
     print("author: ", userid)
     print("text: ", message)
     print("---------------------------------------------------------------------------------------------------------------------------------------------\n")
