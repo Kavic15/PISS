@@ -10,10 +10,13 @@ from run_in_batch.post_batch import post_batch
 from pools import hackers, soldiers, blue_users, post_pool
 #from run_in_batch.comment_batch import send_comment
 
-fetch_posts(platform="profilemag", max_pages=5)
+
 #post_batch(iterations=100, frequency=30, platform="profilemag", authors=blue_users, theme=5)
 
 #PosNeg= "positive" or "negative"
 #Platform = "profilemag" or "bleeper"
 
-comment_batch(iterations=10, frequency=10, mode="pool", PosNeg="negative", platform="profilemag", authors=hackers, theme=5)
+for i in range(100):
+    fetch_posts(platform="profilemag", max_pages=5)
+    comment_batch(iterations=5, frequency=10, mode="pool", PosNeg="negative", platform="profilemag", authors=hackers, theme=5)
+    post_batch(iterations=5, frequency=10, platform="profilemag", authors=blue_users, theme=5)
